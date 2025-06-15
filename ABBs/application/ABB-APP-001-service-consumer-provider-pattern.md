@@ -7,7 +7,7 @@ name: Service Consumer-Provider Integration Pattern
 type: ABB
 classification: Architecture Building Block (ABB)
 domain: Application Architecture
-version: 1.0
+version: 1.1
 status: Approved
 owner: Enterprise Architecture Team
 created: 2025-01-15
@@ -24,8 +24,11 @@ relationships:
     - TBB-INFRA-001  # Zookeeper
   implemented_by:
     - drm-web-product  # Consumer Application
+  depends_on:
+    - ABB-APP-002  # Service Contract Pattern [if exists]
+    - ABB-SEC-001  # Security Pattern [if exists]
+    - ABB-GOV-001  # Service Governance Pattern [if exists]
 ```
-
 
 ## Pattern Description
 This pattern defines the logical architecture for service-based communication where:
@@ -50,3 +53,13 @@ This pattern can be realized through various technologies:
 - RPC-based: See SBB-INT-001 (Dubbo implementation)
 - REST-based: See SBB-INT-002 (REST implementation) [if exists]
 - Message-based: See SBB-INT-003 (Message Queue implementation) [if exists]
+
+## Anti-Patterns
+- Point-to-point integration without service registry
+- Tight coupling between consumer and provider
+- Synchronous calls for long-running operations
+
+## Governance
+- Service contracts must be versioned
+- Breaking changes require governance approval
+- Performance SLAs must be defined
