@@ -24,3 +24,23 @@ relationships:
     - TBB-INFRA-001  # Zookeeper
   implemented_by:
     - drm-web-product  # Consumer Application
+```
+
+
+## Pattern Description
+This pattern defines the logical architecture for service-based communication where:
+- Service Providers expose business capabilities through well-defined interfaces
+- Service Consumers invoke these capabilities through standardized contracts
+- Service Registry enables dynamic discovery and binding
+
+## Key Components
+- **Service Provider**: Exposes business functionality
+- **Service Consumer**: Invokes exposed services
+- **Service Contract**: Defines the interface agreement
+- **Service Registry**: Enables service discovery (optional)
+
+## Quality Attributes
+- Availability: Services must be discoverable and accessible
+- Scalability: Support multiple providers and consumers
+- Reliability: Handle failures gracefully
+- Performance: Meet latency requirements
