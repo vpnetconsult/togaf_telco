@@ -1,0 +1,19 @@
+# .github/artifact-metadata.yml
+artifact_validation:
+  required_fields:
+    - id
+    - name
+    - type
+    - version
+    - status
+    - owner
+    
+  naming_patterns:
+    ABB: "^ABB-[A-Z]{3,4}-\\d{3}$"
+    SBB: "^SBB-[A-Z]{3,4}-\\d{3}$"
+    TBB: "^TBB-[A-Z]{3,5}-\\d{3}$"
+    
+quality_gates:
+  documentation_coverage: 80
+  diagram_required: true
+  review_required: true
