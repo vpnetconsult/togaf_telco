@@ -44,3 +44,9 @@ This pattern defines the logical architecture for service-based communication wh
 - Scalability: Support multiple providers and consumers
 - Reliability: Handle failures gracefully
 - Performance: Meet latency requirements
+
+## Implementation Options
+This pattern can be realized through various technologies:
+- RPC-based: See SBB-INT-001 (Dubbo implementation)
+- REST-based: See SBB-INT-002 (REST implementation) [if exists]
+- Message-based: See SBB-INT-003 (Message Queue implementation) [if exists]
