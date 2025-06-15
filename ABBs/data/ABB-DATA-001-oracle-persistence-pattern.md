@@ -140,3 +140,18 @@ public class StaffOrgServiceImpl implements StaffOrgService {
         // Read-only transaction for better performance
     }
 }
+
+```
+
+### 6. **Performance Patterns**
+```markdown
+## Performance Patterns
+
+### Query Optimization
+1. **Use Bind Variables**
+```sql
+-- Good: Uses bind variable
+SELECT * FROM TB_USER WHERE STAFF_ID = :staffId
+
+-- Bad: Concatenated SQL
+SELECT * FROM TB_USER WHERE STAFF_ID = 'EMP001'
