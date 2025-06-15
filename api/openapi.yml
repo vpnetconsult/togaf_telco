@@ -1,0 +1,23 @@
+# api/openapi.yml
+openapi: 3.0.0
+info:
+  title: Architecture Repository API
+  version: 1.0.0
+
+paths:
+  /artifacts/{id}:
+    get:
+      summary: Get artifact by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Artifact details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artifact'
