@@ -7,7 +7,7 @@ This repository contains the organization's TOGAF architecture artifacts includi
 1. Clone the repository
 ```bash
 git clone https://github.com/org/architecture-repository.git
-
+```
 2. Create a new artefact
 ```bash
 cp governance/templates/ABB-template.md ABBs/application/ABB-APP-002-new-pattern.md
