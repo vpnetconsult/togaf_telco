@@ -1,0 +1,30 @@
+# config/artifact-config.yml
+artifact_types:
+  ABB:
+    prefix: "ABB"
+    categories: ["application", "data", "technology", "infrastructure"]
+    review_required: true
+    approval_levels: 2
+    
+  SBB:
+    prefix: "SBB"
+    categories: ["integration-patterns", "security-patterns", "data-patterns"]
+    review_required: true
+    approval_levels: 1
+    
+  TBB:
+    prefix: "TBB"
+    categories: ["technology", "infrastructure"]
+    review_required: false
+    approval_levels: 1
+
+versioning:
+  strategy: "semantic"
+  format: "MAJOR.MINOR.PATCH"
+  
+lifecycle_states:
+  - Draft
+  - Review
+  - Approved
+  - Deprecated
+  - Retired
