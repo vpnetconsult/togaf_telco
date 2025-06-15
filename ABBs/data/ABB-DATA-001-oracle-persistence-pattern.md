@@ -86,7 +86,7 @@ public class StaffOrgDAOImpl implements StaffOrgDAO {
         return sqlSession.selectOne("StaffOrgMapper.findByStaffId", staffId);
     }
 }
-```
+
 ### MyBatis Mapper Configuration
 <!-- StaffOrgMapper.xml -->
 <mapper namespace="StaffOrgMapper">
@@ -117,6 +117,7 @@ public class StaffOrgDAOImpl implements StaffOrgDAO {
     <property name="connectionTimeout" value="30000"/>
     <property name="idleTimeout" value="600000"/>
 </bean>
+```
 
 
 ### 5. **Transaction Management Section**
