@@ -1,0 +1,24 @@
+{
+  "artifacts": [
+    {
+      "id": "ABB-APP-001",
+      "type": "ABB",
+      "name": "Service Consumer-Provider Integration Pattern",
+      "path": "ABBs/application/ABB-APP-001-service-consumer-provider-pattern.md",
+      "status": "Approved",
+      "tags": ["integration", "microservices", "dubbo"],
+      "relationships": {
+        "uses": ["TBB-TECH-001", "TBB-TECH-002"],
+        "usedBy": ["SBB-INT-001"],
+        "relatedTo": ["ABB-APP-002"]
+      },
+      "metrics": {
+        "usageCount": 15,
+        "lastUsed": "2025-01-10",
+        "implementations": ["drm-web", "ngportal-web"]
+      }
+    }
+  ],
+  "lastUpdated": "2025-01-15T10:00:00Z",
+  "totalArtifacts": 6
+}
