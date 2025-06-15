@@ -86,3 +86,21 @@ public class StaffOrgDAOImpl implements StaffOrgDAO {
         return sqlSession.selectOne("StaffOrgMapper.findByStaffId", staffId);
     }
 }
+```
+
+<!-- StaffOrgMapper.xml -->
+<mapper namespace="StaffOrgMapper">
+    <resultMap id="StaffUserResult" type="com.company.model.StaffUser">
+        <id property="userId" column="USER_ID"/>
+        <result property="staffId" column="STAFF_ID"/>
+        <result property="userName" column="USER_NAME"/>
+        <result property="department" column="DEPT_NAME"/>
+    </resultMap>
+    
+    <select id="findByStaffId" resultMap="StaffUserResult">
+        SELECT u.USER_ID, u.STAFF_ID, u.USER_NAME, d.DEPT_NAME
+        FROM TB_USER_PROFILE u
+        LEFT JOIN TB_DEPARTMENT d ON u.DEPT_ID = d.DEPT_ID
+        WHERE u.STAFF_ID = #{staffId}
+    </select>
+</mapper>
