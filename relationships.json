@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    {"id": "ABB-APP-001", "type": "ABB", "group": "application"},
+    {"id": "SBB-INT-001", "type": "SBB", "group": "integration"},
+    {"id": "TBB-TECH-001", "type": "TBB", "group": "technology"}
+  ],
+  "links": [
+    {"source": "ABB-APP-001", "target": "TBB-TECH-001", "type": "uses"},
+    {"source": "SBB-INT-001", "target": "ABB-APP-001", "type": "implements"}
+  ]
+}
