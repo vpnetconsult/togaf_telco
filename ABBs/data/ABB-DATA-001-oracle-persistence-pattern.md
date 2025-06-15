@@ -59,8 +59,6 @@ graph TB
     
     style DAO fill:#e1f5fe
     style DB fill:#fff3e0
-
-**Where**: As a markdown section with Mermaid diagram in code blocks
 ```
 
 ### 4. **Components Section**
