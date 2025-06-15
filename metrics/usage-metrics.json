@@ -1,0 +1,17 @@
+// metrics/usage-metrics.json
+{
+  "artifacts": {
+    "ABB-APP-001": {
+      "views": 1523,
+      "downloads": 89,
+      "implementations": 15,
+      "last_accessed": "2025-01-15",
+      "popularity_score": 0.85,
+      "feedback": {
+        "helpful": 45,
+        "not_helpful": 2
+      }
+    }
+  },
+  "period": "2025-Q1"
+}
