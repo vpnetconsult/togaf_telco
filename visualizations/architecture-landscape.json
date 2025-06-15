@@ -1,0 +1,23 @@
+// visualizations/architecture-landscape.json
+{
+  "landscape": {
+    "layers": [
+      {
+        "name": "Business",
+        "artifacts": []
+      },
+      {
+        "name": "Application",
+        "artifacts": ["ABB-APP-001"]
+      },
+      {
+        "name": "Technology",
+        "artifacts": ["TBB-TECH-001", "TBB-TECH-002"]
+      },
+      {
+        "name": "Infrastructure",
+        "artifacts": ["TBB-INFRA-001"]
+      }
+    ]
+  }
+}
