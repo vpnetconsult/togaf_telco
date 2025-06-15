@@ -87,7 +87,7 @@ public class StaffOrgDAOImpl implements StaffOrgDAO {
     }
 }
 ```
-
+### MyBatis Mapper Configuration
 <!-- StaffOrgMapper.xml -->
 <mapper namespace="StaffOrgMapper">
     <resultMap id="StaffUserResult" type="com.company.model.StaffUser">
@@ -104,3 +104,38 @@ public class StaffOrgDAOImpl implements StaffOrgDAO {
         WHERE u.STAFF_ID = #{staffId}
     </select>
 </mapper>
+
+### Connection Pool Configuration
+<!-- DataSource Configuration -->
+<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+    <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+    <property name="jdbcUrl" value="${db.url}"/>
+    <property name="username" value="${db.username}"/>
+    <property name="password" value="${db.password}"/>
+    <property name="maximumPoolSize" value="50"/>
+    <property name="minimumIdle" value="10"/>
+    <property name="connectionTimeout" value="30000"/>
+    <property name="idleTimeout" value="600000"/>
+</bean>
+
+
+### 5. **Transaction Management Section**
+```markdown
+## Transaction Management
+
+### Declarative Transaction Configuration
+```java
+@Service
+@Transactional(propagation = Propagation.REQUIRED)
+public class StaffOrgServiceImpl implements StaffOrgService {
+    
+    @Transactional(isolation = Isolation.READ_COMMITTED)
+    public void updateStaffInfo(StaffUser staff) {
+        // Business logic with automatic transaction management
+    }
+    
+    @Transactional(readOnly = true)
+    public StaffUser getStaffInfo(String staffId) {
+        // Read-only transaction for better performance
+    }
+}
