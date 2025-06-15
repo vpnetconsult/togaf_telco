@@ -59,3 +59,32 @@ graph TB
     
     style DAO fill:#e1f5fe
     style DB fill:#fff3e0
+
+**Where**: As a markdown section with Mermaid diagram in code blocks
+```
+
+### 4. **Components Section**
+```markdown
+## Components
+
+### Data Access Object (DAO) Layer
+```java
+// DAO Interface
+public interface StaffOrgDAO {
+    StaffUser findByStaffId(String staffId);
+    List<StaffUser> findByDepartment(String deptId);
+    void updateStaffInfo(StaffUser staff);
+    void insertStaffUser(StaffUser staff);
+}
+
+// DAO Implementation
+@Repository
+public class StaffOrgDAOImpl implements StaffOrgDAO {
+    @Autowired
+    private SqlSessionTemplate sqlSession;
+    
+    @Override
+    public StaffUser findByStaffId(String staffId) {
+        return sqlSession.selectOne("StaffOrgMapper.findByStaffId", staffId);
+    }
+}
