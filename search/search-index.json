@@ -1,0 +1,12 @@
+// search/search-index.json
+{
+  "index": {
+    "ABB-APP-001": {
+      "title": "Service Consumer-Provider Integration Pattern",
+      "keywords": ["dubbo", "rpc", "microservices", "oracle", "integration"],
+      "description": "Reusable pattern for RPC-based service integration",
+      "content_hash": "sha256:abcd1234...",
+      "last_indexed": "2025-01-15T10:00:00Z"
+    }
+  }
+}
